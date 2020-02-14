@@ -15,7 +15,8 @@
 
 #define BOOT_MODE_JUMP_FW     0
 #define BOOT_MODE_LOADER      1
-#define BOOT_MODE_ROMBOOT     2
+#define BOOT_MODE_CMDIF       2
+#define BOOT_MODE_ROMBOOT     3
 
 
 uint8_t boot_mode = BOOT_MODE_LOADER;
@@ -53,6 +54,7 @@ void apInit(void)
   switch(boot_mode)
   {
     case BOOT_MODE_LOADER:
+    case BOOT_MODE_CMDIF:
       logPrintf("boot begin...\r\n");
       break;
 
@@ -108,7 +110,14 @@ void apMain(void)
     if (millis()-pre_time >= 100)
     {
       pre_time = millis();
-      ledToggle(_DEF_LED1);
+      if (boot_mode == BOOT_MODE_LOADER)
+      {
+        ledToggle(_DEF_LED1);
+      }
+      else
+      {
+        ledOn(_DEF_LED1);
+      }
     }
   }
 }
