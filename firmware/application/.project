@@ -37,6 +37,11 @@
 			<locationURI>$%7BPARENT-1-PROJECT_LOC%7D/external_lib/CMSIS</locationURI>
 		</link>
 		<link>
+			<name>src/lib/FreeRTOS</name>
+			<type>2</type>
+			<locationURI>$%7BPARENT-1-PROJECT_LOC%7D/external_lib/FreeRTOS</locationURI>
+		</link>
+		<link>
 			<name>src/lib/STM32H7xx_HAL_Driver</name>
 			<type>2</type>
 			<locationURI>$%7BPARENT-1-PROJECT_LOC%7D/external_lib/STM32H7xx_HAL_Driver</locationURI>
