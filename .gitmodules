@@ -1,3 +1,6 @@
 [submodule "firmware/external_lib/openmv"]
 	path = firmware/external_lib/openmv
 	url = https://github.com/openmv/openmv.git
+[submodule "firmware\\external_lib\\bosdk"]
+	path = firmware\\external_lib\\bosdk
+	url = https://github.com/OpusK/bosdk.git
